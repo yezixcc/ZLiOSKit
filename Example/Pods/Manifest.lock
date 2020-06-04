@@ -1,0 +1,47 @@
+PODS:
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - Masonry (1.1.0)
+  - ZLiOSKit (0.1.0):
+    - ZLiOSKit/Categories (= 0.1.0)
+    - ZLiOSKit/Components (= 0.1.0)
+    - ZLiOSKit/Theme (= 0.1.0)
+  - ZLiOSKit/Categories (0.1.0)
+  - ZLiOSKit/Components (0.1.0):
+    - Masonry (~> 1.1.0)
+    - ZLiOSKit/Components/ActionSheet (= 0.1.0)
+    - ZLiOSKit/Components/Buttons (= 0.1.0)
+    - ZLiOSKit/Theme
+  - ZLiOSKit/Components/ActionSheet (0.1.0):
+    - Masonry (~> 1.1.0)
+    - ZLiOSKit/Theme
+  - ZLiOSKit/Components/Buttons (0.1.0):
+    - Masonry (~> 1.1.0)
+    - ZLiOSKit/Theme
+  - ZLiOSKit/Theme (0.1.0):
+    - ZLiOSKit/Categories
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - ZLiOSKit (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - FBSnapshotTestCase
+    - Masonry
+
+EXTERNAL SOURCES:
+  ZLiOSKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  ZLiOSKit: 7e18d30529542bc018746c4375b70ca3b74a949c
+
+PODFILE CHECKSUM: fbe43b8b42cf1e7b4024059bcfaac802cc9f9bd2
+
+COCOAPODS: 1.9.3

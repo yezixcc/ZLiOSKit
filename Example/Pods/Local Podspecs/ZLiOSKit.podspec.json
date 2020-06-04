@@ -1,0 +1,57 @@
+{
+  "name": "ZLiOSKit",
+  "version": "0.1.0",
+  "summary": "ZL iOS基础库",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/yezixcc/ZLiOSKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "gaoxingwang": "794575986@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/yezixcc/ZLiOSKit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "subspecs": [
+    {
+      "name": "Categories",
+      "source_files": "ZLiOSKit/Categories/**/*"
+    },
+    {
+      "name": "Theme",
+      "source_files": "ZLiOSKit/Theme/**/*",
+      "dependencies": {
+        "ZLiOSKit/Categories": [
+
+        ]
+      }
+    },
+    {
+      "name": "Components",
+      "dependencies": {
+        "Masonry": [
+          "~> 1.1.0"
+        ],
+        "ZLiOSKit/Theme": [
+
+        ]
+      },
+      "subspecs": [
+        {
+          "name": "ActionSheet",
+          "source_files": "ZLiOSKit/Components/ActionSheet/**/*"
+        },
+        {
+          "name": "Buttons",
+          "source_files": "ZLiOSKit/Components/Buttons/**/*"
+        }
+      ]
+    }
+  ]
+}

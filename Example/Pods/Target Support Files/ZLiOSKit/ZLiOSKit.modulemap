@@ -1,0 +1,6 @@
+framework module ZLiOSKit {
+  umbrella header "ZLiOSKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
