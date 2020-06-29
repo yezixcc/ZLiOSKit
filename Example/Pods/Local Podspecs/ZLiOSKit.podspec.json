@@ -1,6 +1,6 @@
 {
   "name": "ZLiOSKit",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "summary": "ZL iOS基础库",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/yezixcc/ZLiOSKit",
@@ -13,14 +13,14 @@
   },
   "source": {
     "git": "https://github.com/yezixcc/ZLiOSKit.git",
-    "tag": "0.1.0"
+    "tag": "1.0.1"
   },
   "platforms": {
     "ios": "8.0"
   },
   "dependencies": {
     "AFNetworking": [
-      "~> 2.3"
+
     ]
   },
   "subspecs": [
@@ -67,7 +67,7 @@
       "name": "Components",
       "dependencies": {
         "Masonry": [
-          "~> 1.1.0"
+
         ],
         "ZLiOSKit/Theme": [
 
@@ -96,7 +96,7 @@
           "source_files": "ZLiOSKit/Components/Alerts/**/*",
           "dependencies": {
             "TTTAttributedLabel": [
-              "~> 2.0.0"
+
             ]
           }
         },
@@ -121,7 +121,7 @@
 
             ],
             "MJRefresh": [
-              "~> 3.4.3"
+
             ]
           }
         },

@@ -28,167 +28,167 @@ PODS:
   - Masonry (1.1.0)
   - MJRefresh (3.4.3)
   - TTTAttributedLabel (2.0.0)
-  - ZLiOSKit (0.1.0):
-    - AFNetworking (~> 2.3)
-    - ZLiOSKit/Categories (= 0.1.0)
-    - ZLiOSKit/Components (= 0.1.0)
-    - ZLiOSKit/Theme (= 0.1.0)
-    - ZLiOSKit/Tools (= 0.1.0)
-  - ZLiOSKit/Categories (0.1.0):
-    - AFNetworking (~> 2.3)
-  - ZLiOSKit/Components (0.1.0):
-    - AFNetworking (~> 2.3)
-    - Masonry (~> 1.1.0)
-    - ZLiOSKit/Components/ActionSheet (= 0.1.0)
-    - ZLiOSKit/Components/Alerts (= 0.1.0)
-    - ZLiOSKit/Components/Banners (= 0.1.0)
-    - ZLiOSKit/Components/Buttons (= 0.1.0)
-    - ZLiOSKit/Components/DigitLabel (= 0.1.0)
-    - ZLiOSKit/Components/EmotionMap (= 0.1.0)
-    - ZLiOSKit/Components/GroupHeaders (= 0.1.0)
-    - ZLiOSKit/Components/Links (= 0.1.0)
-    - ZLiOSKit/Components/Menus (= 0.1.0)
-    - ZLiOSKit/Components/Navigation (= 0.1.0)
-    - ZLiOSKit/Components/News (= 0.1.0)
-    - ZLiOSKit/Components/Notifications (= 0.1.0)
-    - ZLiOSKit/Components/TableCells (= 0.1.0)
-    - ZLiOSKit/Components/Tables (= 0.1.0)
-    - ZLiOSKit/Components/Tags (= 0.1.0)
-    - ZLiOSKit/Components/ViewModels (= 0.1.0)
-    - ZLiOSKit/Components/ZKCycleScrollView (= 0.1.0)
+  - ZLiOSKit (1.0.1):
+    - AFNetworking
+    - ZLiOSKit/Categories (= 1.0.1)
+    - ZLiOSKit/Components (= 1.0.1)
+    - ZLiOSKit/Theme (= 1.0.1)
+    - ZLiOSKit/Tools (= 1.0.1)
+  - ZLiOSKit/Categories (1.0.1):
+    - AFNetworking
+  - ZLiOSKit/Components (1.0.1):
+    - AFNetworking
+    - Masonry
+    - ZLiOSKit/Components/ActionSheet (= 1.0.1)
+    - ZLiOSKit/Components/Alerts (= 1.0.1)
+    - ZLiOSKit/Components/Banners (= 1.0.1)
+    - ZLiOSKit/Components/Buttons (= 1.0.1)
+    - ZLiOSKit/Components/DigitLabel (= 1.0.1)
+    - ZLiOSKit/Components/EmotionMap (= 1.0.1)
+    - ZLiOSKit/Components/GroupHeaders (= 1.0.1)
+    - ZLiOSKit/Components/Links (= 1.0.1)
+    - ZLiOSKit/Components/Menus (= 1.0.1)
+    - ZLiOSKit/Components/Navigation (= 1.0.1)
+    - ZLiOSKit/Components/News (= 1.0.1)
+    - ZLiOSKit/Components/Notifications (= 1.0.1)
+    - ZLiOSKit/Components/TableCells (= 1.0.1)
+    - ZLiOSKit/Components/Tables (= 1.0.1)
+    - ZLiOSKit/Components/Tags (= 1.0.1)
+    - ZLiOSKit/Components/ViewModels (= 1.0.1)
+    - ZLiOSKit/Components/ZKCycleScrollView (= 1.0.1)
     - ZLiOSKit/Theme
-  - ZLiOSKit/Components/ActionSheet (0.1.0):
-    - AFNetworking (~> 2.3)
-    - Masonry (~> 1.1.0)
+  - ZLiOSKit/Components/ActionSheet (1.0.1):
+    - AFNetworking
+    - Masonry
     - ZLiOSKit/Theme
-  - ZLiOSKit/Components/Alerts (0.1.0):
-    - AFNetworking (~> 2.3)
-    - Masonry (~> 1.1.0)
-    - TTTAttributedLabel (~> 2.0.0)
+  - ZLiOSKit/Components/Alerts (1.0.1):
+    - AFNetworking
+    - Masonry
+    - TTTAttributedLabel
     - ZLiOSKit/Theme
-  - ZLiOSKit/Components/Banners (0.1.0):
-    - AFNetworking (~> 2.3)
-    - Masonry (~> 1.1.0)
-    - ZLiOSKit/Components/Banners/Styles (= 0.1.0)
+  - ZLiOSKit/Components/Banners (1.0.1):
+    - AFNetworking
+    - Masonry
+    - ZLiOSKit/Components/Banners/Styles (= 1.0.1)
     - ZLiOSKit/Components/Tables
     - ZLiOSKit/Components/ViewModels
     - ZLiOSKit/Components/ZKCycleScrollView
     - ZLiOSKit/Theme
-  - ZLiOSKit/Components/Banners/Styles (0.1.0):
-    - AFNetworking (~> 2.3)
-    - Masonry (~> 1.1.0)
+  - ZLiOSKit/Components/Banners/Styles (1.0.1):
+    - AFNetworking
+    - Masonry
     - ZLiOSKit/Components/Tables
     - ZLiOSKit/Components/ViewModels
     - ZLiOSKit/Components/ZKCycleScrollView
     - ZLiOSKit/Theme
-  - ZLiOSKit/Components/Buttons (0.1.0):
-    - AFNetworking (~> 2.3)
-    - Masonry (~> 1.1.0)
+  - ZLiOSKit/Components/Buttons (1.0.1):
+    - AFNetworking
+    - Masonry
     - ZLiOSKit/Theme
-  - ZLiOSKit/Components/DigitLabel (0.1.0):
-    - AFNetworking (~> 2.3)
-    - Masonry (~> 1.1.0)
+  - ZLiOSKit/Components/DigitLabel (1.0.1):
+    - AFNetworking
+    - Masonry
     - ZLiOSKit/Theme
     - ZLiOSKit/Tools/DigitTool
-  - ZLiOSKit/Components/EmotionMap (0.1.0):
-    - AFNetworking (~> 2.3)
-    - Masonry (~> 1.1.0)
+  - ZLiOSKit/Components/EmotionMap (1.0.1):
+    - AFNetworking
+    - Masonry
     - ZLiOSKit/Theme
-  - ZLiOSKit/Components/GroupHeaders (0.1.0):
-    - AFNetworking (~> 2.3)
-    - Masonry (~> 1.1.0)
+  - ZLiOSKit/Components/GroupHeaders (1.0.1):
+    - AFNetworking
+    - Masonry
     - ZLiOSKit/Theme
-  - ZLiOSKit/Components/Links (0.1.0):
-    - AFNetworking (~> 2.3)
-    - Masonry (~> 1.1.0)
+  - ZLiOSKit/Components/Links (1.0.1):
+    - AFNetworking
+    - Masonry
     - ZLiOSKit/Theme
-  - ZLiOSKit/Components/Menus (0.1.0):
-    - AFNetworking (~> 2.3)
-    - Masonry (~> 1.1.0)
+  - ZLiOSKit/Components/Menus (1.0.1):
+    - AFNetworking
+    - Masonry
     - ZLiOSKit/Components/Tables
     - ZLiOSKit/Theme
-  - ZLiOSKit/Components/Navigation (0.1.0):
-    - AFNetworking (~> 2.3)
-    - Masonry (~> 1.1.0)
+  - ZLiOSKit/Components/Navigation (1.0.1):
+    - AFNetworking
+    - Masonry
     - ZLiOSKit/Components/Alerts
     - ZLiOSKit/Theme
-  - ZLiOSKit/Components/News (0.1.0):
-    - AFNetworking (~> 2.3)
-    - Masonry (~> 1.1.0)
-    - ZLiOSKit/Components/News/ZX01 (= 0.1.0)
-    - ZLiOSKit/Components/News/ZX02 (= 0.1.0)
+  - ZLiOSKit/Components/News (1.0.1):
+    - AFNetworking
+    - Masonry
+    - ZLiOSKit/Components/News/ZX01 (= 1.0.1)
+    - ZLiOSKit/Components/News/ZX02 (= 1.0.1)
     - ZLiOSKit/Components/Tables
     - ZLiOSKit/Components/ViewModels
     - ZLiOSKit/Theme
-  - ZLiOSKit/Components/News/ZX01 (0.1.0):
-    - AFNetworking (~> 2.3)
-    - Masonry (~> 1.1.0)
+  - ZLiOSKit/Components/News/ZX01 (1.0.1):
+    - AFNetworking
+    - Masonry
     - ZLiOSKit/Components/Tables
     - ZLiOSKit/Components/Tags
     - ZLiOSKit/Components/ViewModels
     - ZLiOSKit/Theme
-  - ZLiOSKit/Components/News/ZX02 (0.1.0):
-    - AFNetworking (~> 2.3)
-    - Masonry (~> 1.1.0)
+  - ZLiOSKit/Components/News/ZX02 (1.0.1):
+    - AFNetworking
+    - Masonry
     - ZLiOSKit/Components/Tables
     - ZLiOSKit/Components/ViewModels
     - ZLiOSKit/Theme
-  - ZLiOSKit/Components/Notifications (0.1.0):
-    - AFNetworking (~> 2.3)
-    - Masonry (~> 1.1.0)
-    - ZLiOSKit/Components/Notifications/TZ01 (= 0.1.0)
+  - ZLiOSKit/Components/Notifications (1.0.1):
+    - AFNetworking
+    - Masonry
+    - ZLiOSKit/Components/Notifications/TZ01 (= 1.0.1)
     - ZLiOSKit/Components/Tables
     - ZLiOSKit/Components/ViewModels
     - ZLiOSKit/Theme
-  - ZLiOSKit/Components/Notifications/TZ01 (0.1.0):
-    - AFNetworking (~> 2.3)
-    - Masonry (~> 1.1.0)
+  - ZLiOSKit/Components/Notifications/TZ01 (1.0.1):
+    - AFNetworking
+    - Masonry
     - ZLiOSKit/Components/Tables
     - ZLiOSKit/Components/ViewModels
     - ZLiOSKit/Theme
-  - ZLiOSKit/Components/TableCells (0.1.0):
-    - AFNetworking (~> 2.3)
-    - Masonry (~> 1.1.0)
+  - ZLiOSKit/Components/TableCells (1.0.1):
+    - AFNetworking
+    - Masonry
     - ZLiOSKit/Components/Tables
     - ZLiOSKit/Theme
-  - ZLiOSKit/Components/Tables (0.1.0):
-    - AFNetworking (~> 2.3)
-    - Masonry (~> 1.1.0)
-    - MJRefresh (~> 3.4.3)
+  - ZLiOSKit/Components/Tables (1.0.1):
+    - AFNetworking
+    - Masonry
+    - MJRefresh
     - ZLiOSKit/Components/EmotionMap
     - ZLiOSKit/Theme
-  - ZLiOSKit/Components/Tags (0.1.0):
-    - AFNetworking (~> 2.3)
-    - Masonry (~> 1.1.0)
+  - ZLiOSKit/Components/Tags (1.0.1):
+    - AFNetworking
+    - Masonry
     - ZLiOSKit/Categories
     - ZLiOSKit/Theme
-  - ZLiOSKit/Components/ViewModels (0.1.0):
-    - AFNetworking (~> 2.3)
-    - Masonry (~> 1.1.0)
+  - ZLiOSKit/Components/ViewModels (1.0.1):
+    - AFNetworking
+    - Masonry
     - ZLiOSKit/Theme
     - ZLiOSKit/Tools/TimeTool
-  - ZLiOSKit/Components/ZKCycleScrollView (0.1.0):
-    - AFNetworking (~> 2.3)
-    - Masonry (~> 1.1.0)
+  - ZLiOSKit/Components/ZKCycleScrollView (1.0.1):
+    - AFNetworking
+    - Masonry
     - ZLiOSKit/Theme
-  - ZLiOSKit/Theme (0.1.0):
-    - AFNetworking (~> 2.3)
+  - ZLiOSKit/Theme (1.0.1):
+    - AFNetworking
     - ZLiOSKit/Categories
-  - ZLiOSKit/Tools (0.1.0):
-    - AFNetworking (~> 2.3)
-    - ZLiOSKit/Tools/DigitTool (= 0.1.0)
-    - ZLiOSKit/Tools/LocationTool (= 0.1.0)
-    - ZLiOSKit/Tools/TimeTool (= 0.1.0)
-    - ZLiOSKit/Tools/ViewControllerTool (= 0.1.0)
-  - ZLiOSKit/Tools/DigitTool (0.1.0):
-    - AFNetworking (~> 2.3)
+  - ZLiOSKit/Tools (1.0.1):
+    - AFNetworking
+    - ZLiOSKit/Tools/DigitTool (= 1.0.1)
+    - ZLiOSKit/Tools/LocationTool (= 1.0.1)
+    - ZLiOSKit/Tools/TimeTool (= 1.0.1)
+    - ZLiOSKit/Tools/ViewControllerTool (= 1.0.1)
+  - ZLiOSKit/Tools/DigitTool (1.0.1):
+    - AFNetworking
     - ZLiOSKit/Theme
-  - ZLiOSKit/Tools/LocationTool (0.1.0):
-    - AFNetworking (~> 2.3)
-  - ZLiOSKit/Tools/TimeTool (0.1.0):
-    - AFNetworking (~> 2.3)
-  - ZLiOSKit/Tools/ViewControllerTool (0.1.0):
-    - AFNetworking (~> 2.3)
+  - ZLiOSKit/Tools/LocationTool (1.0.1):
+    - AFNetworking
+  - ZLiOSKit/Tools/TimeTool (1.0.1):
+    - AFNetworking
+  - ZLiOSKit/Tools/ViewControllerTool (1.0.1):
+    - AFNetworking
 
 DEPENDENCIES:
   - FBSnapshotTestCase
@@ -212,7 +212,7 @@ SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJRefresh: 53e3e3219f204425ee6d3e62e8733d3295944cd6
   TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
-  ZLiOSKit: e7cdd2dfe2d9a8adbf9303b21785acaa3ac5e46a
+  ZLiOSKit: 20d3a028ac1727c356571b766304b000b950a7fe
 
 PODFILE CHECKSUM: fbe43b8b42cf1e7b4024059bcfaac802cc9f9bd2
 

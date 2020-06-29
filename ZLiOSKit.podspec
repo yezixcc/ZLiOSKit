@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZLiOSKit'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'ZL iOS基础库'
 
 # This description is used to generate tags and improve search results.
@@ -86,7 +86,7 @@ TODO: Add long description of the pod here.
     # Alerts
     components.subspec 'Alerts' do |alerts|
         alerts.source_files = 'ZLiOSKit/Components/Alerts/**/*'
-        alerts.dependency 'TTTAttributedLabel', '~> 2.0.0'
+        alerts.dependency 'TTTAttributedLabel'
     end
     # Navigation
     components.subspec 'Navigation' do |navigation|
@@ -101,7 +101,7 @@ TODO: Add long description of the pod here.
     components.subspec 'Tables' do |tables|
         tables.source_files = 'ZLiOSKit/Components/Tables/**/*'
         tables.dependency 'ZLiOSKit/Components/EmotionMap'
-        tables.dependency 'MJRefresh', '~> 3.4.3'
+        tables.dependency 'MJRefresh'
     end
     # TableCells
     components.subspec 'TableCells' do |tableCells|
@@ -173,7 +173,7 @@ TODO: Add long description of the pod here.
 #    end
     
     
-    components.dependency 'Masonry', '~> 1.1.0'
+    components.dependency 'Masonry'
     components.dependency 'ZLiOSKit/Theme'
   end
   
@@ -184,6 +184,6 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-   s.dependency 'AFNetworking', '~> 2.3'
+   s.dependency 'AFNetworking'
    
 end
