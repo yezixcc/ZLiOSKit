@@ -13,8 +13,10 @@
 #define ZLNextStepButtonHeight 46.f
 #define ZLNextStepButtonCircle 4.f
 @interface ZLNextStepButton ()
+
 @property (nonatomic, assign) ZLNextStepButtonStyle style;
 @property (nonatomic, weak) id<ZLNextStepButtonStateSource>stateSource;
+
 @end
 
 @implementation ZLNextStepButton
@@ -39,8 +41,6 @@
 }
 
 - (void)commInit {
-    self.normalColorKey = kButtonColor_Normal;
-    self.unableColorKey = kButtonColor_Unable;
     self.titleLabel.fontKey = kFont_Title_Nor;
     UIColor *titleColor = [UIColor whiteColor];
     [self setTitleColor:titleColor forState:UIControlStateNormal];
@@ -49,7 +49,9 @@
 
 - (void)setEnabled:(BOOL)enabled {
     [super setEnabled:enabled];
-    [self updateState];
+    NSString *colorKey = enabled? kButtonColor_Normal:kButtonColor_Unable;
+    self.backgroundColorKey = colorKey;
+    self.userInteractionEnabled = enabled;
 }
 
 - (void)setStyle:(ZLNextStepButtonStyle)style {
@@ -58,6 +60,16 @@
         self.layer.cornerRadius = ZLNextStepButtonCircle;
     }else if (_style == ZLNextStepButtonStyleHalfCircle) {
         self.layer.cornerRadius = ZLNextStepButtonHeight/2.f;
+    }
+}
+
+- (void)setTextFields:(NSArray<UITextField *> *)textFields {
+    if (_textFields != textFields) {
+        _textFields = textFields;
+        for (UITextField *textField in textFields) {
+            [textField addTarget:self action:@selector(updateState) forControlEvents:UIControlEventEditingChanged];
+        }
+        [self updateState];
     }
 }
 
@@ -85,10 +97,16 @@
     BOOL enable = self.enabled;
     if (response) {
         enable = [_stateSource zlNextStepButtonEnabale];
+    }else if (self.textFields.count != 0) {
+        enable = YES;
+        for (UITextField *textField in self.textFields) {
+            if (textField.text.length == 0) {
+                enable = NO;
+                break;
+            }
+        }
     }
-    NSString *colorKey = enable? self.normalColorKey:self.unableColorKey;
-    self.backgroundColorKey = colorKey;
-    self.userInteractionEnabled = enable;
+    self.enabled = enable;
 }
 
 @end

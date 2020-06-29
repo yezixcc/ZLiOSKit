@@ -8,19 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@class ZLActionSheetViewController;
 @protocol ZLActionSheetDelegate <NSObject>
 
 @optional
-- (void)actionSheetDidClickIndex:(NSInteger)index;
-- (void)actionSheetDidClickCancel;
+- (void)actionSheet:(ZLActionSheetViewController *)sheet didClickIndex:(NSInteger)index;
+- (void)actionSheetDidClickCancel:(ZLActionSheetViewController *)sheet;
 
 @end
 
 @interface ZLActionSheetViewController : UIViewController
-@property (strong, nonatomic) UIView *actionSheetView;
-@property (strong, nonatomic) UILabel *titleLabel;
-@property (strong, nonatomic) UIView *contentView;
-@property (strong, nonatomic) UILabel *cancelLabel;
+
 @property (nonatomic, weak) id<ZLActionSheetDelegate>delegate;
 
 - (instancetype)initWithActionTitles:(NSArray *)actionTitles

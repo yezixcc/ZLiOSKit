@@ -18,6 +18,11 @@
   "platforms": {
     "ios": "8.0"
   },
+  "dependencies": {
+    "AFNetworking": [
+      "~> 2.3"
+    ]
+  },
   "subspecs": [
     {
       "name": "Categories",
@@ -33,6 +38,32 @@
       }
     },
     {
+      "name": "Tools",
+      "subspecs": [
+        {
+          "name": "LocationTool",
+          "source_files": "ZLiOSKit/Tools/LocationTool/**/*"
+        },
+        {
+          "name": "TimeTool",
+          "source_files": "ZLiOSKit/Tools/TimeTool/**/*"
+        },
+        {
+          "name": "ViewControllerTool",
+          "source_files": "ZLiOSKit/Tools/ViewControllerTool/**/*"
+        },
+        {
+          "name": "DigitTool",
+          "source_files": "ZLiOSKit/Tools/DigitTool/**/*",
+          "dependencies": {
+            "ZLiOSKit/Theme": [
+
+            ]
+          }
+        }
+      ]
+    },
+    {
       "name": "Components",
       "dependencies": {
         "Masonry": [
@@ -44,12 +75,167 @@
       },
       "subspecs": [
         {
+          "name": "ViewModels",
+          "source_files": "ZLiOSKit/Components/ViewModels/**/*",
+          "dependencies": {
+            "ZLiOSKit/Tools/TimeTool": [
+
+            ]
+          }
+        },
+        {
           "name": "ActionSheet",
           "source_files": "ZLiOSKit/Components/ActionSheet/**/*"
         },
         {
           "name": "Buttons",
           "source_files": "ZLiOSKit/Components/Buttons/**/*"
+        },
+        {
+          "name": "Alerts",
+          "source_files": "ZLiOSKit/Components/Alerts/**/*",
+          "dependencies": {
+            "TTTAttributedLabel": [
+              "~> 2.0.0"
+            ]
+          }
+        },
+        {
+          "name": "Navigation",
+          "source_files": "ZLiOSKit/Components/Navigation/**/*",
+          "dependencies": {
+            "ZLiOSKit/Components/Alerts": [
+
+            ]
+          }
+        },
+        {
+          "name": "EmotionMap",
+          "source_files": "ZLiOSKit/Components/EmotionMap/**/*"
+        },
+        {
+          "name": "Tables",
+          "source_files": "ZLiOSKit/Components/Tables/**/*",
+          "dependencies": {
+            "ZLiOSKit/Components/EmotionMap": [
+
+            ],
+            "MJRefresh": [
+              "~> 3.4.3"
+            ]
+          }
+        },
+        {
+          "name": "TableCells",
+          "source_files": "ZLiOSKit/Components/TableCells/**/*",
+          "dependencies": {
+            "ZLiOSKit/Components/Tables": [
+
+            ]
+          }
+        },
+        {
+          "name": "ZKCycleScrollView",
+          "source_files": "ZLiOSKit/Components/ZKCycleScrollView/**/*"
+        },
+        {
+          "name": "Banners",
+          "source_files": "ZLiOSKit/Components/Banners/*.{h,m}",
+          "dependencies": {
+            "ZLiOSKit/Components/ZKCycleScrollView": [
+
+            ],
+            "ZLiOSKit/Components/Tables": [
+
+            ],
+            "ZLiOSKit/Components/ViewModels": [
+
+            ]
+          },
+          "subspecs": [
+            {
+              "name": "Styles",
+              "source_files": "ZLiOSKit/Components/Banners/Styles/**/*"
+            }
+          ]
+        },
+        {
+          "name": "Menus",
+          "source_files": "ZLiOSKit/Components/Menus/**/*",
+          "dependencies": {
+            "ZLiOSKit/Components/Tables": [
+
+            ]
+          }
+        },
+        {
+          "name": "DigitLabel",
+          "source_files": "ZLiOSKit/Components/DigitLabel/**/*",
+          "dependencies": {
+            "ZLiOSKit/Tools/DigitTool": [
+
+            ]
+          }
+        },
+        {
+          "name": "GroupHeaders",
+          "source_files": "ZLiOSKit/Components/GroupHeaders/**/*"
+        },
+        {
+          "name": "Tags",
+          "source_files": "ZLiOSKit/Components/Tags/**/*",
+          "dependencies": {
+            "ZLiOSKit/Categories": [
+
+            ]
+          }
+        },
+        {
+          "name": "News",
+          "dependencies": {
+            "ZLiOSKit/Components/Tables": [
+
+            ],
+            "ZLiOSKit/Components/ViewModels": [
+
+            ]
+          },
+          "subspecs": [
+            {
+              "name": "ZX01",
+              "source_files": "ZLiOSKit/Components/News/ZX01/**/*",
+              "dependencies": {
+                "ZLiOSKit/Components/Tags": [
+
+                ]
+              }
+            },
+            {
+              "name": "ZX02",
+              "source_files": "ZLiOSKit/Components/News/ZX02/**/*"
+            }
+          ]
+        },
+        {
+          "name": "Links",
+          "source_files": "ZLiOSKit/Components/Links/**/*"
+        },
+        {
+          "name": "Notifications",
+          "dependencies": {
+            "ZLiOSKit/Components/Tables": [
+
+            ],
+            "ZLiOSKit/Components/ViewModels": [
+
+            ]
+          },
+          "subspecs": [
+            {
+              "name": "TZ01",
+              "source_files": "ZLiOSKit/Components/Notifications/TZ01/**/*"
+            }
+          ]
         }
       ]
     }

@@ -14,6 +14,10 @@ static CGFloat kSheetHeight = 50.f;
 @interface ZLActionSheetViewController ()
 
 @property (strong, nonatomic) UIView *bgView;
+@property (strong, nonatomic) UIView *actionSheetView;
+@property (strong, nonatomic) UILabel *titleLabel;
+@property (strong, nonatomic) UIView *contentView;
+@property (strong, nonatomic) UILabel *cancelLabel;
 @property (nonatomic, copy) NSString *sheetTitle;
 @property (nonatomic, copy) NSArray *actionTitles;
 @property (nonatomic, copy) NSString *cancel;
@@ -133,15 +137,15 @@ static CGFloat kSheetHeight = 50.f;
 - (void)action:(UIButton *)button {
     [self dismiss];
     NSInteger index = button.tag - 100;
-    if (self.delegate && [self.delegate respondsToSelector:@selector(actionSheetDidClickIndex:)]) {
-        [self.delegate actionSheetDidClickIndex:index];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(actionSheet:didClickIndex:)]) {
+        [self.delegate actionSheet:self didClickIndex:index];
     }
 }
 
 - (void)cancelAction {
     [self dismiss];
-    if (self.delegate && [self.delegate respondsToSelector:@selector(actionSheetDidClickCancel)]) {
-        [self.delegate actionSheetDidClickCancel];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(actionSheetDidClickCancel:)]) {
+        [self.delegate actionSheetDidClickCancel:self];
     }
 }
 
