@@ -110,6 +110,7 @@ static NSString *INFO_CLICK_KEY = @"INFO_CLICK_KEY";
     [super updateContents];
     _titleLabel.text = _title;
     _messageLabel.text = _message;
+    _messageLabel.textAlignment = _messageAlignment;
     _imageView.image = _image;
     _titleLabel.textColor = _titleColor ? : _titleLabel.textColor;
     // 超链接
@@ -196,8 +197,11 @@ static NSString *INFO_CLICK_KEY = @"INFO_CLICK_KEY";
 - (void)attributedLabel:(TTTAttributedLabel *)label didSelectLinkWithTransitInformation:(NSDictionary *)components {
     NSString *text = components[INFO_CLICK_KEY];
     NSInteger index = [self.linkInfos indexOfObject:text];
-    if (self.linkDidClicked) {
-        self.linkDidClicked(text, index);
+    if (self.linkClickedCompleteHidden) {
+        BOOL hidden = self.linkClickedCompleteHidden(text, index);
+        if (hidden) {
+            [self hidden];
+        }
     }
 }
 

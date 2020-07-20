@@ -68,8 +68,22 @@
         _textFields = textFields;
         for (UITextField *textField in textFields) {
             [textField addTarget:self action:@selector(updateState) forControlEvents:UIControlEventEditingChanged];
+            [textField addObserver:self forKeyPath:@"text" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
         }
         [self updateState];
+    }
+}
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
+    if ([keyPath isEqualToString:@"text"]) {
+        [self updateState];
+    }else{
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+    }
+}
+-(void)dealloc{
+    for (UITextField *textField in self.textFields) {
+        [textField removeObserver:self forKeyPath:@"text" context:nil];
     }
 }
 

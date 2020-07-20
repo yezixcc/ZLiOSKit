@@ -51,6 +51,12 @@ static void *KImage = &KImage;
         if (self.imageKey) {
             [button setImage:[ZLThemeManager imageForImageName:self.imageKey] forState:UIControlStateNormal];
         }
+        if (self.textColorKey) {
+            [button setTitleColor:[ZLThemeManager colorForKey:self.textColorKey] forState:UIControlStateNormal];
+        }
+        if (self.fontKey) {
+            button.titleLabel.font = [ZLThemeManager fontForKey:self.fontKey];
+        }
     }else if ([self isKindOfClass:[UITextField class]]) {
         UITextField *label = (UITextField *)self;
         if (self.textColorKey) {

@@ -30,22 +30,12 @@
     return self;
 }
 
-- (instancetype)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
-    if (self) {
-        [self comminit];
-        self.type = ZLEmotionMapTypeEmptyDefault;
-    }
-    return self;
-}
-
-
 - (void)comminit {
     self.backgroundColorKey = kBackgroundColor;
     [self addSubview:self.contentView];
     [self.contentView mas_updateConstraints:^(MASConstraintMaker *make) {
         make.leading.trailing.equalTo(self);
-        make.centerY.equalTo(self).offset(-25);
+        make.centerY.equalTo(self).offset(-50);
     }];
     [self.contentView addSubview:self.imageView];
     [self.imageView mas_updateConstraints:^(MASConstraintMaker *make) {
@@ -58,12 +48,12 @@
 - (void)updateConstraints {
     [self.titleLabel mas_updateConstraints:^(MASConstraintMaker *make) {
         make.leading.trailing.equalTo(self.contentView).inset(20);
-        make.top.equalTo(self.imageView.mas_bottom).offset(20);
+        make.top.equalTo(self.imageView.mas_bottom).offset(10);
         make.centerX.equalTo(self.contentView);
     }];
     [self.subTitleLabel mas_updateConstraints:^(MASConstraintMaker *make) {
         make.leading.trailing.equalTo(self.contentView).inset(20);
-        make.top.equalTo(self.titleLabel.mas_bottom).offset(20);
+        make.top.equalTo(self.titleLabel.mas_bottom).offset(10);
         make.centerX.equalTo(self.contentView);
     }];
     if (self.subtitle.length) {
@@ -85,6 +75,7 @@
     if (type == ZLEmotionMapTypeEmptyDefault) {
         self.imageName = @"icon_page_empty";
         self.title = @"暂无数据";
+        self.subtitle = nil;
     }else if (type == ZLEmotionMapTypeErrorDefault) {
         self.imageName = @"icon_page_fail";
         self.title = @"网络加载失败";

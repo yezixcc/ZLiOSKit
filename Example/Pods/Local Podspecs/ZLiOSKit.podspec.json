@@ -1,6 +1,6 @@
 {
   "name": "ZLiOSKit",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "summary": "ZL iOS基础库",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/yezixcc/ZLiOSKit",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/yezixcc/ZLiOSKit.git",
-    "tag": "1.0.1"
+    "tag": "1.1.0"
   },
   "platforms": {
     "ios": "8.0"
@@ -236,6 +236,18 @@
               "source_files": "ZLiOSKit/Components/Notifications/TZ01/**/*"
             }
           ]
+        },
+        {
+          "name": "ProtocolAgree",
+          "source_files": "ZLiOSKit/Components/ProtocolAgree/**/*",
+          "dependencies": {
+            "TTTAttributedLabel": [
+
+            ],
+            "ZLiOSKit/Components/Alerts": [
+
+            ]
+          }
         }
       ]
     }

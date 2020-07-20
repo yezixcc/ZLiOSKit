@@ -81,6 +81,8 @@
 /// @param value  数值
 + (NSString *)riseOrFallColorKeyForValue:(double)value;
 
+/// 金额大写
++ (NSString *)formatTotalUppercase:(NSString *)total;
 
 @end
 

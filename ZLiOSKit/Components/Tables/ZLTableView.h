@@ -16,6 +16,7 @@
 /// @param tableView tableView
 /// @param indexPath indexPath
 - (UITableViewCell *)zlTableView:(ZLTableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
+- (void)zlTableView:(ZLTableView *)tableView cell:(UITableViewCell *)cell indexPath:(NSIndexPath *)indexPath;
 
 /// 点击事件
 /// @param tableView 列表

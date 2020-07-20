@@ -86,9 +86,11 @@
 @property (nonatomic, strong) UIColor *linkColor;
 /// 带超链接的文案
 @property (nonatomic, copy) NSArray<NSString *> *linkInfos;
+/// 居中
+@property (nonatomic, assign) NSTextAlignment messageAlignment;
 
-/// 点击链接
-@property (nonatomic, copy) void(^linkDidClicked)(NSString *string, NSInteger index);
+/// 点击链接 - 是否需要关闭弹框
+@property (nonatomic, copy) BOOL(^linkClickedCompleteHidden)(NSString *string, NSInteger index);
 
 @end
 

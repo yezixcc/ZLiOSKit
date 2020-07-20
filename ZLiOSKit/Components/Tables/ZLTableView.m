@@ -137,16 +137,19 @@ NSInteger const kTablePageSize = 20;  /// 每页数据
                 return;
             }
             NSInteger count = 0;
-            for (ZLTableModel *tableModel in weakSelf.datas) {
-                count += tableModel.rowModels.count;
-            }
             if (totalCount) { /// 总数存在用总数判断有无下页
+                for (ZLTableModel *tableModel in weakSelf.datas) {
+                    count += tableModel.rowModels.count;
+                }
                 if (count < totalCount.integerValue) {
                     [weakSelf setPullUpRefresh:YES];
                 }else {
                     [weakSelf setPullUpRefresh:NO];
                 }
             }else { /// 总数不存在用单页判断有无下页
+                for (ZLTableModel *tableModel in datas) {
+                    count += tableModel.rowModels.count;
+                }
                 if (count < kTablePageSize) {
                     [weakSelf setPullUpRefresh:NO];
                 }else {
@@ -198,24 +201,29 @@ NSInteger const kTablePageSize = 20;  /// 每页数据
 
 - (void)showEmotionMapWithType:(ZLEmotionMapType)type {
     [self clearEmotionMap];
-    if ([_zlDelegate respondsToSelector:@selector(emotionMapView)]) {
-        _emotionMap = [_zlDelegate emotionMapView];
+    ZLEmotionMapView *emotionMap = [[ZLEmotionMapView alloc] initWithType:type];
+    __weak typeof(self) weakSelf = self;
+    emotionMap.didClickView = ^{
+        [weakSelf clearEmotionMap];
+        [weakSelf beginRresh];
+    };
+    
+    if (type != ZLEmotionMapTypeErrorDefault) {
+        if ([_zlDelegate respondsToSelector:@selector(emotionMapView)]) {
+            _emotionMap = [_zlDelegate emotionMapView];
+        }else {
+            if ([_zlDelegate respondsToSelector:@selector(emotionMapTitle)]) {
+                emotionMap.title = [_zlDelegate emotionMapTitle];
+            }
+            if ([_zlDelegate respondsToSelector:@selector(emotionMapSubTitle)]) {
+                emotionMap.subtitle = [_zlDelegate emotionMapSubTitle];
+            }
+            if ([_zlDelegate respondsToSelector:@selector(emotionMapImageName)]) {
+                emotionMap.imageName = [_zlDelegate emotionMapImageName];
+            }
+            _emotionMap = emotionMap;
+        }
     }else {
-        ZLEmotionMapView *emotionMap = [[ZLEmotionMapView alloc] initWithType:type];
-        if ([_zlDelegate respondsToSelector:@selector(emotionMapTitle)]) {
-            emotionMap.title = [_zlDelegate emotionMapTitle];
-        }
-        if ([_zlDelegate respondsToSelector:@selector(emotionMapSubTitle)]) {
-            emotionMap.subtitle = [_zlDelegate emotionMapSubTitle];
-        }
-        if ([_zlDelegate respondsToSelector:@selector(emotionMapImageName)]) {
-            emotionMap.imageName = [_zlDelegate emotionMapImageName];
-        }
-        __weak typeof(self) weakSelf = self;
-        emotionMap.didClickView = ^{
-            [weakSelf clearEmotionMap];
-            [weakSelf beginRresh];
-        };
         _emotionMap = emotionMap;
     }
     _emotionMap.frame = self.superview.bounds;
@@ -262,8 +270,8 @@ NSInteger const kTablePageSize = 20;  /// 每页数据
         [cell setRowModel:model];
         [cell reloadData:model];
     }
-    if ([_zlDelegate respondsToSelector:@selector(zlTableView:cellForRowAtIndexPath:)]) {
-        [_zlDelegate zlTableView:self cellForRowAtIndexPath:indexPath];
+    if ([_zlDelegate respondsToSelector:@selector(zlTableView:cell:indexPath:)]) {
+        [_zlDelegate zlTableView:self cell:cell indexPath:indexPath];
     }
     return cell;
 }

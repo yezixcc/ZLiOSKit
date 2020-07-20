@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZLiOSKit'
-  s.version          = '1.0.1'
+  s.version          = '1.1.0'
   s.summary          = 'ZL iOS基础库'
 
 # This description is used to generate tags and improve search results.
@@ -165,6 +165,13 @@ TODO: Add long description of the pod here.
         notifications.dependency 'ZLiOSKit/Components/Tables'
         notifications.dependency 'ZLiOSKit/Components/ViewModels'
     end
+    # ProtocolAgree
+    components.subspec 'ProtocolAgree' do |protocolAgree|
+        protocolAgree.source_files = 'ZLiOSKit/Components/ProtocolAgree/**/*'
+        protocolAgree.dependency 'TTTAttributedLabel'
+        protocolAgree.dependency 'ZLiOSKit/Components/Alerts'
+    end
+    
     # Picker
 #    components.subspec 'Picker' do |picker|
 #        picker.source_files = 'ZLiOSKit/Components/Picker/*.{h,m}'
